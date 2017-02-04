@@ -6,6 +6,4 @@ var urlSchema = new Schema({
   shortUrl: { type: Number, unique: true }
 });
 
-var urlModel = mongoose.model('Url', urlSchema);
-
-module.exports.urlModel;
+module.exports = mongoose.model('Url', urlSchema);;

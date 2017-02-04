@@ -18,7 +18,10 @@ app.get('/', function (req, res) {
 	res.send("Hello");
 });
 
-app.get('/new/:url(*)', UrlController.validate, UrlController.shorten);
+app.get('/new/:url(*)', 
+	UrlController.validate, 
+	UrlController.checkIfAlreadyStored, 
+	UrlController.shorten);
 
 app.listen(PORT, function () {
   console.log('App listening on port ' + PORT + '!');
