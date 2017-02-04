@@ -1,4 +1,5 @@
 var validUrl = require('valid-url');
+var Url = require('./models/url');
 
 module.exports.validate = function(req, res, next) {
 	var url = req.params.url;
@@ -11,5 +12,6 @@ module.exports.validate = function(req, res, next) {
 
 module.exports.shorten = function(req, res) {
 	var url = req.params.url;
-	res.send(":)");
+	var shortUrl = Math.floor(Math.random() * (10000 - 1000) ) + 1000;
+	res.send(shortUrl.toString());
 }
