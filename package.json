@@ -1,0 +1,23 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "description": "freeCodeCamp back-end challenge",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rghossi/url-shortener.git"
+  },
+  "author": "rghossi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rghossi/url-shortener/issues"
+  },
+  "homepage": "https://github.com/rghossi/url-shortener#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "mongoose": "^4.8.1"
+  }
+}
