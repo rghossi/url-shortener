@@ -18,6 +18,10 @@ app.get('/', function (req, res) {
 	res.send("Hello");
 });
 
+app.get('/favicon.ico', function(req, res) {
+    res.sendStatus(204);
+});
+
 app.get('/:shortUrl', UrlController.goToUrl);
 
 app.get('/new/:url(*)', 
