@@ -1,6 +1,18 @@
 var validUrl = require('valid-url');
 var Url = require('./models/url');
 
+module.exports. goToUrl = function(req, res) {
+	var shortUrl = req.params.shortUrl;
+	Url.findOne({shortUrl}, function(err, url){
+		if (err) throw err;
+		if (url) {
+			res.redirect(url.url);
+		} else {
+			res.json({error: "Short url not found on our database!"});
+		}
+	})
+}
+
 var getRandomAvailableNumber = function(numbersList){
 	var randomNumber = Math.floor(Math.random() * (10000 - 1000) ) + 1000;
 	if (numbersList.indexOf(randomNumber) > -1){

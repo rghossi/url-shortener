@@ -18,6 +18,8 @@ app.get('/', function (req, res) {
 	res.send("Hello");
 });
 
+app.get('/:shortUrl', UrlController.goToUrl);
+
 app.get('/new/:url(*)', 
 	UrlController.validate, 
 	UrlController.checkIfAlreadyStored, 
